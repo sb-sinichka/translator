@@ -1,0 +1,14 @@
+[project]
+name = "stt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "googletrans==4.0.0rc1",
+    "numpy>=2.5.2",
+    "scipy>=1.18.0",
+    "sounddevice>=0.5.5",
+    "speechrecognition>=3.17.0",
+]
+
