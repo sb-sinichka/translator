@@ -29,8 +29,9 @@ with sr.AudioFile("output.wav") as source:
 try:
     text = recognizer.recognize_google(audio, language="ru-RU")
     print("Ты сказал:", text)
-    translated = translator.translate(text,dest='pl',src='ru')
-    print("Перевод на польский:", translated.text)
+    language = input('напишите язык,на который хотите перевести')
+    translated = translator.translate(text,dest=language,src='ru')
+    print("Перевод:", translated.text)
 except sr.UnknownValueError:             # - если Google не понял речь (шум, молчание)
     print("Не удалось распознать речь.")
 except sr.RequestError as e:             # - если нет интернета или API недоступен
